@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCNA Study Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">CCNA 200-301</p>
+        <h1>CCNA Study Hub</h1>
+        <p class="hero__lead">
+          A focused, topic-by-topic guide that breaks down every CCNA domain with
+          clear explanations, checklists, and practice ideas.
+        </p>
+        <div class="hero__actions">
+          <button class="pill" data-filter="all">All Topics</button>
+          <button class="pill" data-filter="fundamentals">Fundamentals</button>
+          <button class="pill" data-filter="network-access">Network Access</button>
+          <button class="pill" data-filter="ip-connectivity">IP Connectivity</button>
+          <button class="pill" data-filter="ip-services">IP Services</button>
+          <button class="pill" data-filter="security">Security</button>
+          <button class="pill" data-filter="automation">Automation</button>
+        </div>
+      </div>
+      <aside class="hero__stats">
+        <div>
+          <h2>6 Domains</h2>
+          <p>Aligned to CCNA 200-301 exam blueprint.</p>
+        </div>
+        <div>
+          <h2>20+ Topics</h2>
+          <p>Detailed explanations, workflows, and study cues.</p>
+        </div>
+        <div>
+          <h2>Study Ready</h2>
+          <p>Includes practice ideas and key commands per topic.</p>
+        </div>
+      </aside>
+    </header>
+
+    <main>
+      <section class="quick-start">
+        <h2>How to use this app</h2>
+        <ol>
+          <li>Pick a domain using the filters above.</li>
+          <li>Open each card for deep explanations and key commands.</li>
+          <li>Check off practice ideas as you complete labs.</li>
+        </ol>
+      </section>
+
+      <section class="grid" id="topics">
+        <article class="card" data-domain="fundamentals">
+          <header>
+            <h3>Network Fundamentals</h3>
+            <span>Domain 1</span>
+          </header>
+          <p>
+            Understand OSI/TCP-IP models, cabling, speed/duplex negotiation, and
+            how frames, packets, and segments move through a network.
+          </p>
+          <ul>
+            <li>Explain OSI layers with real device examples.</li>
+            <li>Describe Ethernet standards and cabling choices.</li>
+            <li>Compare TCP vs UDP and when to use each.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Study Checklist</h4>
+            <ul>
+              <li>Map common protocols to OSI layers (HTTP, ARP, DNS, DHCP).</li>
+              <li>Practice subnetting using /24 to /30 ranges.</li>
+              <li>Know collision vs broadcast domains.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="fundamentals">
+          <header>
+            <h3>IPv4/IPv6 Addressing</h3>
+            <span>Domain 1</span>
+          </header>
+          <p>
+            Cover binary math, subnetting, VLSM, IPv6 structure, and address types
+            including global unicast, link-local, and multicast.
+          </p>
+          <ul>
+            <li>Summarize IPv4 addressing and subnetting steps.</li>
+            <li>Explain IPv6 address notation and compression rules.</li>
+            <li>Differentiate unicast, multicast, and anycast.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Lab Ideas</h4>
+            <ul>
+              <li>Create an addressing plan for a 3-site network.</li>
+              <li>Assign IPv6 link-local and global unicast addresses.</li>
+              <li>Validate with <code>show ip interface</code> outputs.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="network-access">
+          <header>
+            <h3>Switching Concepts</h3>
+            <span>Domain 2</span>
+          </header>
+          <p>
+            Dive into MAC address tables, forwarding logic, VLANs, trunking, and
+            spanning tree to prevent loops.
+          </p>
+          <ul>
+            <li>Describe how switches learn and age MAC addresses.</li>
+            <li>Configure VLANs and 802.1Q trunks.</li>
+            <li>Interpret STP port roles and states.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Key Commands</h4>
+            <ul>
+              <li><code>show mac address-table</code></li>
+              <li><code>show spanning-tree</code></li>
+              <li><code>switchport mode trunk</code></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="network-access">
+          <header>
+            <h3>Wireless Networks</h3>
+            <span>Domain 2</span>
+          </header>
+          <p>
+            Explore wireless standards, RF fundamentals, AP modes, WLC roles, and
+            roaming strategies.
+          </p>
+          <ul>
+            <li>Compare 802.11 a/b/g/n/ac/ax features.</li>
+            <li>Explain SSIDs, BSS, ESS, and roaming.</li>
+            <li>Understand authentication and encryption options.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Study Prompts</h4>
+            <ul>
+              <li>Identify channel plans for 2.4GHz vs 5GHz.</li>
+              <li>Explain CAPWAP roles and WLC components.</li>
+              <li>List common wireless security weaknesses.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="ip-connectivity">
+          <header>
+            <h3>Routing Concepts</h3>
+            <span>Domain 3</span>
+          </header>
+          <p>
+            Learn about routing tables, static vs dynamic routing, and the
+            administrative distance/metrics used to pick paths.
+          </p>
+          <ul>
+            <li>Describe packet forwarding with longest prefix match.</li>
+            <li>Configure default routes and floating static routes.</li>
+            <li>Interpret routing table codes and next-hop logic.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Checklist</h4>
+            <ul>
+              <li>Build a static routing lab across 3 routers.</li>
+              <li>Verify with <code>show ip route</code>.</li>
+              <li>Explain how routing loops occur and avoid them.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="ip-connectivity">
+          <header>
+            <h3>Single-Area OSPF</h3>
+            <span>Domain 3</span>
+          </header>
+          <p>
+            Understand OSPF neighbor states, LSA types, DR/BDR elections, and
+            cost calculations for single-area deployments.
+          </p>
+          <ul>
+            <li>Configure OSPFv2/v3 with network statements.</li>
+            <li>Explain OSPF adjacency requirements.</li>
+            <li>Use passive interfaces and optimize convergence.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Command Drill</h4>
+            <ul>
+              <li><code>show ip ospf neighbor</code></li>
+              <li><code>show ip ospf interface</code></li>
+              <li><code>router ospf 1</code> + <code>network</code></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="ip-services">
+          <header>
+            <h3>DHCP &amp; DNS</h3>
+            <span>Domain 4</span>
+          </header>
+          <p>
+            Master DHCP operations, DHCP relay, DNS hierarchy, record types, and
+            how clients resolve names.
+          </p>
+          <ul>
+            <li>Describe the DHCP DORA process.</li>
+            <li>Configure DHCP pools and exclusions.</li>
+            <li>Explain DNS A/AAAA/CNAME/MX records.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Practice</h4>
+            <ul>
+              <li>Build a DHCP server on a router and test leases.</li>
+              <li>Use <code>nslookup</code> to validate DNS responses.</li>
+              <li>Map DNS troubleshooting steps.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="ip-services">
+          <header>
+            <h3>NAT &amp; NTP</h3>
+            <span>Domain 4</span>
+          </header>
+          <p>
+            Understand NAT types, translation tables, and time synchronization
+            with NTP for log accuracy.
+          </p>
+          <ul>
+            <li>Compare static, dynamic, and PAT.</li>
+            <li>Verify translations with <code>show ip nat</code>.</li>
+            <li>Configure NTP clients and servers.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Key Reminders</h4>
+            <ul>
+              <li>Know inside vs outside interfaces.</li>
+              <li>Set NTP authentication where possible.</li>
+              <li>Document time drift troubleshooting steps.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="security">
+          <header>
+            <h3>Device Security</h3>
+            <span>Domain 5</span>
+          </header>
+          <p>
+            Apply AAA concepts, secure management access, and implement password
+            policies for network devices.
+          </p>
+          <ul>
+            <li>Configure local users and privilege levels.</li>
+            <li>Enable SSH and disable insecure services.</li>
+            <li>Use banners, exec timeouts, and logging.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Hardening Tasks</h4>
+            <ul>
+              <li>Implement <code>enable secret</code> and SSH keys.</li>
+              <li>Apply role-based CLI views (if available).</li>
+              <li>Verify with <code>show run | section line vty</code>.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="security">
+          <header>
+            <h3>Network Security</h3>
+            <span>Domain 5</span>
+          </header>
+          <p>
+            Cover ACLs, port security, DHCP snooping, and common attack vectors
+            like spoofing or man-in-the-middle.
+          </p>
+          <ul>
+            <li>Build standard and extended ACLs.</li>
+            <li>Configure port security with sticky MACs.</li>
+            <li>Identify and mitigate common L2 attacks.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Checklist</h4>
+            <ul>
+              <li>Document ACL direction and wildcard masks.</li>
+              <li>Enable DHCP snooping and DAI.</li>
+              <li>Test ACLs using ping and traceroute.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-domain="automation">
+          <header>
+            <h3>Automation &amp; Programmability</h3>
+            <span>Domain 6</span>
+          </header>
+          <p>
+            Learn about APIs, JSON/YAML, RESTCONF/NETCONF, and the difference
+            between controller-based and device-by-device management.
+          </p>
+          <ul>
+            <li>Explain data formats and model-driven telemetry.</li>
+            <li>Use Postman or curl with REST APIs.</li>
+            <li>Describe benefits of SDN architectures.</li>
+          </ul>
+          <div class="card__details">
+            <h4>Practice Ideas</h4>
+            <ul>
+              <li>Parse JSON from a sample API response.</li>
+              <li>Write a simple Python script to configure devices.</li>
+              <li>Document automation use cases in your lab.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Built for CCNA learners. Review the official blueprint and pair this
+        guide with labs and practice exams.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
